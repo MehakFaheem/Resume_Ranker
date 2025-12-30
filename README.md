@@ -1,73 +1,59 @@
-📄 Resume Ranker – AI-Powered Resume Scoring System
+## 📄 Resume Ranker – AI-Powered Resume Scoring System
 
 Resume Ranker is a machine learning–based web application that automatically analyzes, scores, and ranks resumes based on multiple professional and technical factors.
-The goal is to reduce manual resume screening time and help recruiters shortlist candidates more efficiently and fairly.
+The goal is to **reduce manual resume screening time** and help recruiters shortlist candidates more efficiently and fairly.
 
-🚀 Features
+---
 
-Upload resumes in PDF, DOCX, or TXT format
+## 🚀 Features
 
-Automatically extracts:
+* Upload resumes in **PDF, DOCX, or TXT** format
+* Automatically extracts:
 
-Education level
+  * Education level
+  * Years of experience
+  * Skills
+  * Projects
+  * Certifications
+  * GPA / CGPA
+  * GitHub & LinkedIn presence
+* Generates a **resume score** using a trained ML model
+* Provides **personalized improvement suggestions**
+* Simple and interactive **Streamlit UI**
 
-Years of experience
+---
 
-Skills
+## 🧠 How It Works
 
-Projects
+1. User uploads a resume
+2. Resume text is extracted using file-specific parsers
+3. Important features are extracted using NLP & regex
+4. Features are encoded and passed to a trained ML model
+5. The model predicts a **resume score**
+6. The app displays:
 
-Certifications
+   * Resume score
+   * Feature breakdown
+   * Suggestions for improvement
 
-GPA / CGPA
+---
 
-GitHub & LinkedIn presence
+## 🛠️ Tech Stack
 
-Generates a resume score using a trained ML model
+* **Python**
+* **Streamlit** – frontend UI
+* **scikit-learn** – ML model
+* **Pandas & NumPy** – data processing
+* **Joblib** – model serialization
+* **PyMuPDF (fitz)** – PDF parsing
+* **python-docx** – DOCX parsing
+* **Regex & NLP techniques**
 
-Provides personalized improvement suggestions
+---
 
-Simple and interactive Streamlit UI
+## 📂 Project Structure
 
-🧠 How It Works
-
-User uploads a resume
-
-Resume text is extracted using file-specific parsers
-
-Important features are extracted using NLP & regex
-
-Features are encoded and passed to a trained ML model
-
-The model predicts a resume score
-
-The app displays:
-
-Resume score
-
-Feature breakdown
-
-Suggestions for improvement
-
-🛠️ Tech Stack
-
-Python
-
-Streamlit – frontend UI
-
-scikit-learn – ML model
-
-Pandas & NumPy – data processing
-
-Joblib – model serialization
-
-PyMuPDF (fitz) – PDF parsing
-
-python-docx – DOCX parsing
-
-Regex & NLP techniques
-
-📂 Project Structure
+```
 Resume-Ranker/
 │
 ├── app.py                     # Streamlit application
@@ -76,32 +62,37 @@ Resume-Ranker/
 ├── education_encoder.pkl      # Encoded education levels
 ├── requirements.txt
 └── README.md
+```
 
-▶️ How to Run the Project
+---
 
-Clone the repository
+## ▶️ How to Run the Project
 
+1. Clone the repository
+
+```bash
 git clone https://github.com/your-username/Resume-Ranker.git
 cd Resume-Ranker
+```
 
+2. Install dependencies
 
-Install dependencies
-
+```bash
 pip install -r requirements.txt
+```
 
+3. Run the app
 
-Run the app
-
+```bash
 streamlit run app.py
+```
 
-📈 Future Improvements
+---
 
-Job description–based ranking
+## 📈 Future Improvements
 
-Semantic skill matching using embeddings
-
-Bias detection & fairness scoring
-
-ATS integration
-
-Resume improvement suggestions powered by AI
+* Job description–based ranking
+* Semantic skill matching using embeddings
+* Bias detection & fairness scoring
+* ATS integration
+* Resume improvement suggestions powered by AI
